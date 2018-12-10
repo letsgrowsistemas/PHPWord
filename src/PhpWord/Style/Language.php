@@ -229,7 +229,7 @@ final class Language extends AbstractStyle
             return strtolower($locale) . '-' . strtoupper($locale);
         }
 
-        if ($locale !== null && strstr($locale, '-') === false) {
+        if ($locale !== null && strstr($locale, '-') === false && strstr($locale, '_') === false) {
             throw new \InvalidArgumentException($locale . ' is not a valid language code');
         }
 
